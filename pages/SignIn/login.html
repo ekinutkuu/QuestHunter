@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Quest Hunter</title>
+    <link rel="stylesheet" href="login.css" type="text/css">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <form action="../../database/signin.php" method="post" class="login-form">
+            <div class="login-container">
+                <h1 class="title">Sign In</h1>
+                <div class="input-box">
+                    <input name="username" type="text" placeholder="Enter your username" required>
+                    <i id="userIcon" class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="input-box">
+                    <input name="password" type="password" placeholder="Enter your password" required>
+                    <i id="eyeIcon" class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+                <div class="forgotPassword">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <div class="loginButton-contanier">
+                    <button type="submit" class="loginButton">Sign In</button>
+                </div>
+                <p class="registerText">Don't have an account?
+                    <span class="registerLink"><a href="../SignUp/register.html">Register</a></span>
+                </p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

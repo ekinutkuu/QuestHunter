@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Kode Mono", monospace;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../images/login.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Left Side */
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 450px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid #4a70ac;
+    box-shadow: 2px 2px 15px 2px #3862a4;
+}
+
+.login-container{
+}
+
+.title{
+    padding: 20px;
+    color: #c9dcfa;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.title:hover{
+    cursor: default;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 20px;
+    width: 300px;
+    height: 40px;
+    border-bottom: 1px solid #c9dcfa;
+    /* border: 1px solid #4a70ac; */
+}
+
+.input-box input{
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-family: "Kode Mono", monospace;
+    color: #c9dcfa;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.input-box input:focus{
+    outline: none;
+}
+
+.input-box input::placeholder{
+    color: #c9dcfa;
+}
+
+.input-box #userIcon,
+.input-box #eyeIcon{
+    padding: 10px;
+    color: #c9dcfa;
+}
+
+.input-box #eyeIcon:hover,
+.forgotPassword a:hover{
+    cursor: pointer;
+    color: #7baeff;
+}
+
+.forgotPassword a{
+    margin: 10px 20px;
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+    color: #c9dcfa;
+    font-size: 13px;
+}
+
+.loginButton-contanier{
+    display: flex;
+    justify-content: center;
+}
+
+.loginButton{
+    width: 90%;
+    height: 43px;
+    padding: 10px;
+    margin: 10px;
+    font-family: "Kode Mono", monospace;
+    color: #3a5c93;
+    border: 2px solid #cae4f3;
+    border-radius: 20px;
+    /* background: linear-gradient(90deg, #81bcdf, #cae4f3, #fff); */
+    background: linear-gradient(90deg, #81bcdf, #cae4f3, #cae4f3, #81bcdf);
+    /* background: radial-gradient(ellipse at center, #81bcdf, #cae4f3); */
+    transition: 0.1s ease-in;
+}
+
+.loginButton:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.registerText{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: #c9dcfa;
+    font-size: 13px;
+}
+
+.registerLink a{
+    margin-left: 7px;
+    text-decoration: none;
+    color: #7baeff;
+}
