@@ -6,7 +6,8 @@
 html, body{
     height: 100vh;
     width: 100vw;
-    font-family: Inter;
+    /* font-family: Inter; */
+    font-family: "Kode Mono", monospace;
     background-color: #030b20;
     display: flex;
     align-items: center;
@@ -91,7 +92,7 @@ html, body{
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(164, 187, 255);
 }
 
 .top-row p{
@@ -99,7 +100,7 @@ html, body{
     display: flex;
     justify-content: center;
     width: 20%;
-    color: white;
+    color: rgb(164, 187, 255);
     text-transform: uppercase;
 }
 
@@ -112,6 +113,8 @@ html, body{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    border-radius: 10px;
+    margin: 5px 0;
 }
 
 .problem p{
@@ -119,7 +122,8 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(164, 187, 255);
+    font-size: 0.9rem;
 }
 
 .problem#problem-1,
@@ -135,6 +139,11 @@ html, body{
 
 .problem#problem-2{
     background-color: #07112f;
+}
+
+.problem:hover{
+    background-color: #2a3e78 !important;
+    cursor: pointer;
 }
 
 .problem p:first-child,
