@@ -3,7 +3,7 @@
 include "db_connection.php";
 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         else{
             $sql_query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
             mysqli_query($connection, $sql_query);
-            header("Location: ../SignIn/login.html");
+            header("Location: ../pages/SignIn/login.html");
             die;
         }
     }

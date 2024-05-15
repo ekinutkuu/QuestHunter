@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    
     if (!empty($username) && !empty($password)){
 
         $sql_query = "SELECT * FROM users WHERE username='$username'";
@@ -20,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
             //kullanıcının girdiği şifre veri tabanındaki şifre ile aynı mı?
             if ($userdata['password'] === $password){
                 //echo "Logged In!";
-                header("Location: ../Home/home.html");
+                header("Location: ../index.html");
             }
             else{
                 echo "Invalid password!";
