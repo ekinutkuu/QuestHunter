@@ -1,7 +1,6 @@
 function testRun() {
     var userCode = document.querySelector('textarea[name="user_code"]').value;
 
-    
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "twoSum.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");

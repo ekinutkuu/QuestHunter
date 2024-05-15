@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         0
     ];
 
-    $userCode = $_POST['php_code'];
+    $userCode = $_POST['user_code'];
     eval($userCode);
 
     function testRun($num1, $num2, $testResult){
