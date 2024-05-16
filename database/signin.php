@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include "db_connection.php";
 
 
@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
             //kullanıcının girdiği şifre veri tabanındaki şifre ile aynı mı?
             if ($userdata['password'] === $password){
                 //echo "Logged In!";
+                $_SESSION["ID"] = $userdata['user_id'];
+                //echo $_SESSION["ID"];
                 header("Location: ../index.html");
             }
             else{
