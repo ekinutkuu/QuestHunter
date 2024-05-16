@@ -4,32 +4,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     //Test cases
     $testNums = [
-        [1, 2],
-        [3, 5],
-        [10, 1],
-        [-5, -2],
-        [-9, 5],
-        [0, 0],
+        0,
+        1,
+        5,
+        7,
+        10
     ];
     
     $answers = [
-        3,
-        8,
-        11,
-        -7,
-        -4,
-        0
+        1,
+        1,
+        120,
+        5040,
+        3628800
     ];
 
     $userCode = $_POST['user_code'];
     eval($userCode);
     
-    if (!function_exists('twoSum')){
-        return "Please set the function name to \"twoSum()\" and try again!";
+    if (!function_exists('factorial')){
+        echo "Please set the function name to \"factorial()\" and try again!";
     }
 
-    function testRun($num1, $num2, $testResult){
-        $userResult = twoSum($num1, $num2);
+    function testRun($num, $testResult){
+        $userResult = factorial($num);
 
         if ($userResult == $testResult){
             return true;
@@ -40,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $lengthOfAllTests = count($testNums);
 
     for ($i = 0; $i < $lengthOfAllTests; $i++){
-        $result = testRun($testNums[$i][0], $testNums[$i][1], $answers[$i]);
+        $result = testRun($testNums[$i], $answers[$i]);
         if($result === false){
             echo "Wrong Answer! Try Again.";
             $error = true;
