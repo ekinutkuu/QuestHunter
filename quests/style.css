@@ -248,3 +248,8 @@ html, body{
 .editor-button p{
     font-size: 9px;
 }
+
+.editor-button.disabled {
+    cursor: not-allowed;
+    color: grey;
+}

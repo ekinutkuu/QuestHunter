@@ -42,14 +42,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     for ($i = 0; $i < $lengthOfAllTests; $i++){
         $result = testRun($testNums[$i][0], $testNums[$i][1], $answers[$i]);
         if($result === false){
-            echo "Wrong Answer! Try Again.";
+            echo "failed";
             $error = true;
             break;
         }
     }
 
+    //Test passed
     if (!$error){
-        echo "Congratulations!";
+        echo "passed";
     }
 
 
