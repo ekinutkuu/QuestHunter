@@ -30,15 +30,15 @@ SET time_zone = "+00:00";
 CREATE TABLE `quests` (
   `quest_id` int(11) NOT NULL,
   `quest_name` varchar(255) NOT NULL,
-  `quest_point` int(11) NOT NULL DEFAULT 0,
   `quest_difficulty` varchar(50) NOT NULL DEFAULT 'unknown'
+  `quest_point` int(11) NOT NULL DEFAULT 0,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `quests`
 --
 
-INSERT INTO `quests` (`quest_id`, `quest_name`, `quest_point`, `quest_difficulty`) VALUES
+INSERT INTO `quests` (`quest_id`, `quest_name`, `quest_difficulty`, `quest_point`) VALUES
 (1, 'two sum', 10, 'easy'),
 (2, 'factorial', 30, 'medium');
 
