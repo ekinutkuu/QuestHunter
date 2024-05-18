@@ -7,7 +7,12 @@
     <title>Profile - Quest Hunter</title>
 </head>
 <body>
-    <p style="color: black; font-size: 20px;"><?php echo $_SESSION["ID"]; ?></p>
+    <p style="color: black; font-size: 20px;">
+        <?php 
+            if (isset($_SESSION["ID"]))
+            echo $_SESSION["ID"]; 
+        ?>
+    </p>
     <a href="exit.php">Log out</a>
 </body>
 </html>

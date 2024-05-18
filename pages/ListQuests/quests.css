@@ -124,6 +124,7 @@ html, body{
     align-items: center;
     color: rgb(164, 187, 255);
     font-size: 0.9rem;
+    text-transform: capitalize;
 }
 
 .problem#problem-1,

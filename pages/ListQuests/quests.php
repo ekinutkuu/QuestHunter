@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    include "../../database/db_connection.php";
+    include "../../database/quests_data.php";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
     <div class="navbar"></div>
 
     <div class="wrapper">
@@ -19,22 +25,22 @@
         </div>
         <div class="problems">
             <div class="problem" id="problem-1" onclick="redirectToQuest('../../quests/twoSum/twoSum.html')">
-                <p>Done</p>
-                <p>Two Sum</p>
-                <p>Easy</p>
-                <p>2 Gold</p>
+                <p> <?php echo getQuestStatus($connection, 1); ?> </p>
+                <p> <?php echo getQuestName($connection, 1); ?> </p>
+                <p> <?php echo getQuestDifficulty($connection, 1); ?> </p>
+                <p> <?php echo getQuestPoint($connection, 1); ?> Gold </p>
             </div>
             <div class="problem" id="problem-2" onclick="redirectToQuest('../../quests/factorial/factorial.html')">
-                <p>Done</p>
-                <p>Factorial</p>
-                <p>Medium</p>
-                <p>10 Gold</p>
+                <p> <?php echo getQuestStatus($connection, 2); ?> </p>
+                <p> <?php echo getQuestName($connection, 2); ?> </p>
+                <p> <?php echo getQuestDifficulty($connection, 2); ?> </p>
+                <p> <?php echo getQuestPoint($connection, 2); ?> Gold </p>
             </div>
             <div class="problem" id="problem-1" onclick="redirectToQuest('#')">
-                <p>Done</p>
+                <p>Bla Bla</p>
                 <p>Bla Bla</p>
                 <p>Hard</p>
-                <p>20 Gold</p>
+                <p>50 Gold</p>
             </div>
         </div>
     </div>
