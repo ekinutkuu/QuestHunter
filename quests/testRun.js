@@ -1,7 +1,6 @@
 function testRun(phpFile) {
     var userCode = document.querySelector('textarea[name="user_code"]').value;
     var submitButton = document.getElementById('submit-button');
-    var resultMessage = document.getElementById('output');
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", phpFile + "?t=" + new Date().getTime(), true);
@@ -15,11 +14,11 @@ function testRun(phpFile) {
             if (response.trim() === "passed") {
                 submitButton.classList.remove('disabled');
                 submitButton.setAttribute("onclick", "submitCode()");
-                resultMessage.innerHTML = "Correct Answer!";
+                openPopup("Congratulations", "Correct Answer! Don't forget to submit quest to earn points.");
             } else {
                 submitButton.classList.add('disabled');
                 submitButton.removeAttribute("onclick");
-                resultMessage.innerHTML = "Wrong Answer!";
+                openPopup("Wrong Answer", "Don't lose your spirit and try again!");
             }
 
         }

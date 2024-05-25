@@ -1,0 +1,112 @@
+html.popup-active,
+body.popup-active {
+    overflow: hidden;
+}
+
+#popup-container {
+    position: fixed;
+    display: table;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    backdrop-filter: blur(1px);
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+#popup-container.active {
+    transform: scale(1);
+}
+
+#popup-container.out {
+    transform: scale(0);
+}
+
+.popup-background {
+    display: table-cell;
+    background: rgba(0, 0, 0, 0);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.popup {
+    font-family: "Kode Mono", monospace;
+    padding: 50px;
+    display: inline-block;
+    position: relative;
+    border-radius: 3px;
+    font-weight: 300;
+    color: hsl(220, 50%, 90%);
+    background-color: transparent;
+    box-shadow: .4rem .4rem 10.2rem .2rem hsla(236, 50%, 50%, .3);
+    border: 1px solid darkslateblue;
+    background: linear-gradient(to right, hsl(232.62deg 38.02% 18.36%), hsl(238.15deg 45% 26.71%));
+    /* background: linear-gradient(to right, hsl(210, 30%, 20%), hsl(255, 30%, 25%)); */
+    animation: popupIn 0.3s ease-in-out;
+}
+
+.popup h2 {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.popup p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.popup button {
+    color: #182737;
+    font-weight: 300;
+    width: 50%;
+    height: 40px;
+    margin: 40px 0;
+    margin-bottom: 0;
+    background: linear-gradient(45deg, #3a2395, #a0b9ff, #3a2395);
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s ease;
+}
+
+.popup button:hover {
+    cursor: pointer;
+}
+
+/* 
+.popup-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.popup-svg rect {
+  stroke: #fff;
+  stroke-width: 2px;
+  stroke-dasharray: 778;
+  stroke-dashoffset: 778;
+}
+*/
+
+@keyframes popupIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popupOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
