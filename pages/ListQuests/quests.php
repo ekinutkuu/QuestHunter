@@ -10,11 +10,20 @@
     <meta charset="UTF-8">
     <title>Quests</title>
     <link rel="stylesheet" href="quests.css" type="text/css">
+    <link rel="stylesheet" href="../scrollbar.css" type="text/css">
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="navbar"></div>
+    <div class="navbar">
+        <a href="../../index.html">Home</a>
+        <a href="#">Quests</a>
+        <a href="#">Discuss</a>
+        <a href="#">Rankings</a>
+        <a href="../Profile/profile.php">Profile</a>
+    </div>
 
     <div class="wrapper">
         <div class="top-row">
