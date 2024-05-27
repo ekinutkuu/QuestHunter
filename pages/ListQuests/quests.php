@@ -36,7 +36,13 @@
                 <p> <?php echo getQuestDifficulty($connection, 2); ?> </p>
                 <p> <?php echo getQuestPoint($connection, 2); ?> Gold </p>
             </div>
-            <div class="problem" id="problem-1" onclick="redirectToQuest('#')">
+            <div class="problem" id="problem-1" onclick="redirectToQuest('../../quests/digit/digit.html')">
+                <p> <?php echo getQuestStatus($connection, 3); ?> </p>
+                <p> <?php echo getQuestName($connection, 3); ?> </p>
+                <p> <?php echo getQuestDifficulty($connection, 3); ?> </p>
+                <p> <?php echo getQuestPoint($connection, 3); ?> Gold </p>
+            </div>
+            <div class="problem" id="problem-2" onclick="redirectToQuest('#')">
                 <p>Bla Bla</p>
                 <p>Bla Bla</p>
                 <p>Hard</p>
