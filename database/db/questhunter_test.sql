@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 18 May 2024, 21:23:01
+-- Üretim Zamanı: 28 May 2024, 01:26:58
 -- Sunucu sürümü: 10.4.32-MariaDB
 -- PHP Sürümü: 8.2.12
 
@@ -40,7 +40,8 @@ CREATE TABLE `quests` (
 
 INSERT INTO `quests` (`quest_id`, `quest_name`, `quest_difficulty`, `quest_point`) VALUES
 (1, 'two sum', 'easy', 10),
-(2, 'factorial', 'medium', 30);
+(2, 'factorial', 'medium', 30),
+(3, 'digit', 'hard', 100);
 
 -- --------------------------------------------------------
 
@@ -60,9 +61,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `password`, `point`) VALUES
-(12, 'abc', 'def', 50),
-(13, 'deneme', 'deneme', 0),
-(14, '123', '123', 0);
+(16, 'deneme', 'deneme', 110),
+(17, 'abc', 'def', 0),
+(18, '123', '123', 0);
 
 --
 -- Tetikleyiciler `users`
@@ -104,12 +105,15 @@ CREATE TABLE `users_quests` (
 --
 
 INSERT INTO `users_quests` (`user_id`, `quest_id`, `status`) VALUES
-(12, 1, 1),
-(12, 2, 0),
-(13, 1, 0),
-(13, 2, 0),
-(14, 1, 0),
-(14, 2, 0);
+(16, 1, 1),
+(16, 2, 0),
+(16, 3, 1),
+(17, 1, 0),
+(17, 2, 0),
+(17, 3, 0),
+(18, 1, 0),
+(18, 2, 0),
+(18, 3, 0);
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -142,13 +146,13 @@ ALTER TABLE `users_quests`
 -- Tablo için AUTO_INCREMENT değeri `quests`
 --
 ALTER TABLE `quests`
-  MODIFY `quest_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `quest_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Dökümü yapılmış tablolar için kısıtlamalar

@@ -51,12 +51,6 @@
                 <p> <?php echo getQuestDifficulty($connection, 3); ?> </p>
                 <p> <?php echo getQuestPoint($connection, 3); ?> Gold </p>
             </div>
-            <div class="problem" id="problem-2" onclick="redirectToQuest('#')">
-                <p>Bla Bla</p>
-                <p>Bla Bla</p>
-                <p>Hard</p>
-                <p>50 Gold</p>
-            </div>
         </div>
     </div>
 

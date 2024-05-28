@@ -2,6 +2,6 @@
 
 session_start();
 unset($_SESSION["ID"]);
-header("location: ../SignIn/login.html");
+header("location: ../pages/SignIn/login.html");
 
 ?>

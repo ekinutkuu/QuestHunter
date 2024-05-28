@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
                 //echo "Logged In!";
                 $_SESSION["ID"] = $userdata['user_id'];
                 //echo $_SESSION["ID"];
-                header("Location: ../index.html");
+                header("Location: ../pages/Profile/profile.php");
             }
             else{
                 echo "Invalid password!";
