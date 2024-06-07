@@ -186,7 +186,21 @@ body{
   background: linear-gradient(145deg, #200c43, #1b0a39);
   box-shadow:  10px 10px 19px #170931, -5px -10px 19px #250d4d;
   border: 2px solid #3b246e82;
+  background-size: cover;
+  background-position: center, center;
   transition: 0.2s ease-in;
+}
+
+.intro-1 .intro-imgs{
+  background-image: url(../../assets/images/intro-1.png);
+}
+
+.intro-2 .intro-imgs{
+  background-image: url(../../assets/images/intro-2.jpg);
+}
+
+.intro-3 .intro-imgs{
+  background-image: url(../../assets/images/intro-3.png);
 }
 
 .intro-imgs:hover{
@@ -204,12 +218,6 @@ body{
 
 .intro-2{
   flex-direction: row-reverse;
-}
-
-.intro-2 .intro-imgs{
-  /* background-image: url(images/store2.png); */
-  background-size: cover;
-  background-position: center, center;
 }
 
 /* OUTRO SECTION */
